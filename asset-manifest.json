@@ -1,13 +1,11 @@
 {
   "files": {
-    "main.css": "/react-homework-template/static/css/main.7acaea2f.css",
-    "main.js": "/react-homework-template/static/js/main.07d3183d.js",
-    "index.html": "/react-homework-template/index.html",
-    "main.7acaea2f.css.map": "/react-homework-template/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/react-homework-template/static/js/main.07d3183d.js.map"
+    "main.js": "/goit-react-hw-08-phonebook-chakra/static/js/main.57eaf341.js",
+    "index.html": "/goit-react-hw-08-phonebook-chakra/index.html",
+    "static/media/logo.svg": "/goit-react-hw-08-phonebook-chakra/static/media/logo.034ef726eb08f413c8e9ff1b0abe7414.svg",
+    "main.57eaf341.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/main.57eaf341.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/js/main.57eaf341.js"
   ]
 }
