@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/418.014bbce3.chunk.js","mappings":"yLAMA,UAJc,WACZ,OAAO,SAAC,KAAG,CAACA,EAAG,GAAG,SAAC,SACrB,C","sources":["pages/LogIn.jsx"],"sourcesContent":["import { Box } from '@chakra-ui/react';\n\nconst LogIn = () => {\n  return <Box p={20}>LogIn</Box>;\n};\n\nexport default LogIn;\n"],"names":["p"],"sourceRoot":""}

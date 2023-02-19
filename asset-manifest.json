@@ -1,11 +1,20 @@
 {
   "files": {
-    "main.js": "/goit-react-hw-08-phonebook-chakra/static/js/main.57eaf341.js",
+    "main.js": "/goit-react-hw-08-phonebook-chakra/static/js/main.64dbb3ae.js",
+    "static/js/620.eef3a989.chunk.js": "/goit-react-hw-08-phonebook-chakra/static/js/620.eef3a989.chunk.js",
+    "static/js/532.1019646a.chunk.js": "/goit-react-hw-08-phonebook-chakra/static/js/532.1019646a.chunk.js",
+    "static/js/418.014bbce3.chunk.js": "/goit-react-hw-08-phonebook-chakra/static/js/418.014bbce3.chunk.js",
+    "static/js/285.3f58d5ca.chunk.js": "/goit-react-hw-08-phonebook-chakra/static/js/285.3f58d5ca.chunk.js",
+    "static/media/notPage.jpg": "/goit-react-hw-08-phonebook-chakra/static/media/notPage.74a3d37b9db7fbef4dff.jpg",
+    "static/media/bookImg.jpg": "/goit-react-hw-08-phonebook-chakra/static/media/bookImg.7de6fea5277a5f42846c.jpg",
     "index.html": "/goit-react-hw-08-phonebook-chakra/index.html",
-    "static/media/logo.svg": "/goit-react-hw-08-phonebook-chakra/static/media/logo.034ef726eb08f413c8e9ff1b0abe7414.svg",
-    "main.57eaf341.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/main.57eaf341.js.map"
+    "main.64dbb3ae.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/main.64dbb3ae.js.map",
+    "620.eef3a989.chunk.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/620.eef3a989.chunk.js.map",
+    "532.1019646a.chunk.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/532.1019646a.chunk.js.map",
+    "418.014bbce3.chunk.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/418.014bbce3.chunk.js.map",
+    "285.3f58d5ca.chunk.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/285.3f58d5ca.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.57eaf341.js"
+    "static/js/main.64dbb3ae.js"
   ]
 }
