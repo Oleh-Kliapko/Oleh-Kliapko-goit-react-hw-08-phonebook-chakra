@@ -3,7 +3,11 @@ import { PhoneIcon } from '@chakra-ui/icons';
 
 export const ContactItem = ({ contacts }) => {
   const { colorMode } = useColorMode();
-  const { id, name, number } = contacts;
+  const {
+    // id,
+    name,
+    number,
+  } = contacts;
 
   return (
     <Flex
