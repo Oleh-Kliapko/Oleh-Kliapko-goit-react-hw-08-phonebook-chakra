@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/285.3f58d5ca.chunk.js","mappings":"wLAMA,UAJiB,WACf,OAAO,SAAC,KAAG,CAACA,EAAG,GAAG,SAAC,YACrB,C","sources":["pages/Register.jsx"],"sourcesContent":["import { Box } from '@chakra-ui/react';\n\nconst Register = () => {\n  return <Box p={20}>Register</Box>;\n};\n\nexport default Register;\n"],"names":["p"],"sourceRoot":""}

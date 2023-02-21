@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgoit_react_hw_08_phonebook_chakra=self.webpackChunkgoit_react_hw_08_phonebook_chakra||[]).push([[285],{285:function(e,r,t){t.r(r);var a=t(4087),c=t(184);r.default=function(){return(0,c.jsx)(a.xu,{p:20,children:"Register"})}}}]);
-//# sourceMappingURL=285.3f58d5ca.chunk.js.map
