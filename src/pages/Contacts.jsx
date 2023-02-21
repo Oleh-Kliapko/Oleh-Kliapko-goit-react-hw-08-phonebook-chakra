@@ -15,11 +15,13 @@ const Contacts = () => {
   const { items } = contacts;
 
   return (
-    <Flex p={7} pt="120px" gap={5} flexWrap="wrap">
-      {items.map(item => (
-        <ContactItem key={item.id} contacts={item} />
-      ))}
-    </Flex>
+    <>
+      <Flex p={7} gap={5} flexWrap="wrap">
+        {items.map(item => (
+          <ContactItem key={item.id} contacts={item} />
+        ))}
+      </Flex>
+    </>
   );
 };
 

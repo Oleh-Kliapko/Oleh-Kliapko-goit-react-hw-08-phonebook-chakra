@@ -6,7 +6,7 @@ const Home = () => {
   const colorText = colorMode === 'dark' ? 'green.200' : 'green.800';
 
   return (
-    <Flex alignItems="center" flexDirection="column" gap={5} p={5} pt="120px">
+    <Flex alignItems="center" flexDirection="column" gap={5} p={5}>
       <Box as="samp" fontSize="xl" color={colorText}>
         This is a cool utility to create your own phone book.
       </Box>

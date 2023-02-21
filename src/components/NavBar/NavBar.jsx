@@ -17,14 +17,13 @@ export const NavBar = () => {
         p={3}
         bg={colorMode === 'dark' ? 'gray.500' : 'gray.200'}
         boxShadow="xl"
-        pos="fixed"
         w="100%"
       >
         <Container maxW={'container.2xl'}>
           <Flex alignItems="center">
             <Logo boxSize="60px" objectFit="cover" pointerEvents="none" />
             <Flex as="nav" ml={10}>
-              <Flex gap={10} flexWrap="wrap" justifySelf="flex-start">
+              <Flex gap={10} flexWrap="wrap" justify="flex-start">
                 <Box
                   as={NavLink}
                   fontSize="2xl"

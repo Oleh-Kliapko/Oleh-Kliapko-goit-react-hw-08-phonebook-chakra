@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import { lazy } from 'react';
 import NavBar from './NavBar';
 import NotFoundPage from 'pages/NotFoundPage';
@@ -20,6 +21,7 @@ export const App = () => {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
+      <ToastContainer autoClose={5000} />
     </>
   );
 };

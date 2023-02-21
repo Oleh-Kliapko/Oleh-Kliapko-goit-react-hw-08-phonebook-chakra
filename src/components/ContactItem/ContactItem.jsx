@@ -1,5 +1,12 @@
-import { Avatar, Text, Flex, Button, useColorMode } from '@chakra-ui/react';
-import { PhoneIcon } from '@chakra-ui/icons';
+import {
+  Avatar,
+  Text,
+  Flex,
+  Button,
+  IconButton,
+  useColorMode,
+} from '@chakra-ui/react';
+import { PhoneIcon, DeleteIcon } from '@chakra-ui/icons';
 
 export const ContactItem = ({ contacts }) => {
   const { colorMode } = useColorMode();
@@ -18,12 +25,21 @@ export const ContactItem = ({ contacts }) => {
       bg={colorMode === 'dark' ? 'gray.600' : 'gray.100'}
     >
       <Avatar name={name} src="" />
-      <Flex flexDirection="column" justifyContent="space-between" gap={2}>
-        <Text fontSize="xl" as="b">
+      <Flex flexDirection="column" justify="space-between" gap={2}>
+        <Text fontSize="xl" fontWeight="semibold">
           {name}
         </Text>
         <Text as="samp" fontSize="lg">
-          {<PhoneIcon />} {number}
+          {
+            <IconButton
+              variant="outline"
+              colorScheme="teal"
+              aria-label="Call Sage"
+              fontSize="16px"
+              icon={<PhoneIcon />}
+            />
+          }{' '}
+          {number}
         </Text>
         <Button
           type="button"
@@ -32,6 +48,7 @@ export const ContactItem = ({ contacts }) => {
           //   onClick={() => deleteContact(id)}
         >
           Delete contact
+          <DeleteIcon ml={2} />
         </Button>
       </Flex>
     </Flex>
