@@ -11,7 +11,8 @@ import {
   useColorMode,
 } from '@chakra-ui/react';
 import { AtSignIcon, LockIcon, StarIcon } from '@chakra-ui/icons';
-import autOperations from 'redux/auth/authOperations';
+import authOperations from 'redux/auth/authOperations';
+import FormItems from 'components/FormItems';
 
 const Register = () => {
   const schema = yup
@@ -26,13 +27,15 @@ const Register = () => {
     resolver: yupResolver(schema),
   });
 
-  const { colorMode } = useColorMode();
   const dispatch = useDispatch();
 
   const onFormSubmit = ({ name, email, password }) => {
-    dispatch(autOperations.register({ name, email, password }));
+    dispatch(authOperations.register({ name, email, password }));
     reset();
   };
+
+  const { colorMode } = useColorMode();
+  const shadow = colorMode === 'dark' ? 'dark-lg' : 'md';
 
   return (
     <FormControl
@@ -44,23 +47,35 @@ const Register = () => {
       p={7}
       onSubmit={handleSubmit(onFormSubmit)}
     >
+      <FormItems
+        type="name"
+        helper="Name may contain only letters, apostrophe and spaces"
+      />
       <FormLabel htmlFor="name">
         <StarIcon color="gray.600" mb={1} /> Name
-        <Input type="text" {...register('name', { required: true })} />
+        <Input shadow={shadow} {...register('name', { required: true })} />
         <FormHelperText fontSize={12} color="teal.500" mt={1}>
           Name may contain only letters, apostrophe and spaces
         </FormHelperText>
       </FormLabel>
       <FormLabel htmlFor="email">
         <AtSignIcon color="gray.600" mb={1} /> E-mail
-        <Input type="email" {...register('email', { required: true })} />
+        <Input
+          type="email"
+          shadow={shadow}
+          {...register('email', { required: true })}
+        />
         <FormHelperText fontSize={12} color="teal.500" mt={1}>
           Email must be valid and contain @
         </FormHelperText>
       </FormLabel>
       <FormLabel htmlFor="password">
         <LockIcon color="gray.600" mb={1} /> Password
-        <Input type="password" {...register('password', { required: true })} />
+        <Input
+          type="password"
+          shadow={shadow}
+          {...register('password', { required: true })}
+        />
         <FormHelperText fontSize={12} color="teal.500" mt={1}>
           Password must be at least 7 characters long
         </FormHelperText>
@@ -68,9 +83,10 @@ const Register = () => {
       <Button
         type="submit"
         w={48}
+        shadow={shadow}
         bg={colorMode === 'dark' ? 'teal.500' : 'teal.200'}
       >
-        Save contact
+        SIGN UP
       </Button>
     </FormControl>
   );

@@ -3,8 +3,10 @@ import {
   commonError,
   registerError,
   registerSuccess,
+  loginSuccess,
   loginError,
   logoutError,
+  logoutSuccess,
 } from 'utils/notification';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
@@ -41,6 +43,7 @@ export const logIn = createAsyncThunk(
     try {
       const { data } = await axios.post('/users/login', credentials);
       token.set(data.token);
+      loginSuccess();
       return data;
     } catch (error) {
       loginError();
@@ -53,6 +56,7 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await axios.post('/users/logout');
     token.unset();
+    logoutSuccess();
   } catch (error) {
     logoutError();
     return thunkAPI.rejectWithValue(error.message);
@@ -81,11 +85,11 @@ export const fetchCurrentUser = createAsyncThunk(
   }
 );
 
-const autOperations = {
+const authOperations = {
   register,
   logIn,
   logOut,
   fetchCurrentUser,
 };
 
-export default autOperations;
+export default authOperations;
