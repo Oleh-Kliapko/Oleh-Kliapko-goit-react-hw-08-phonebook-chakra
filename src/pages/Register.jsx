@@ -12,7 +12,6 @@ import {
 } from '@chakra-ui/react';
 import { AtSignIcon, LockIcon, StarIcon } from '@chakra-ui/icons';
 import authOperations from 'redux/auth/authOperations';
-import FormItems from 'components/FormItems';
 
 const Register = () => {
   const schema = yup
@@ -47,10 +46,6 @@ const Register = () => {
       p={7}
       onSubmit={handleSubmit(onFormSubmit)}
     >
-      <FormItems
-        type="name"
-        helper="Name may contain only letters, apostrophe and spaces"
-      />
       <FormLabel htmlFor="name">
         <StarIcon color="gray.600" mb={1} /> Name
         <Input shadow={shadow} {...register('name', { required: true })} />
