@@ -1,16 +1,15 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { Box, Flex, Container, useColorMode } from '@chakra-ui/react';
 import { ColorModeSwitcher } from 'utils/ColorModeSwitcher';
 import { Logo } from 'images';
 import { Loader } from 'utils/loader';
-import { getIsLoggedIn } from 'redux/auth/authSelectors';
 import UserMenu from 'components/UserMenu';
 import { NavItem } from './NavItem';
+import { useAuth } from 'components/hooks';
 
 export const NavBar = () => {
-  const isLoggedIn = useSelector(getIsLoggedIn);
+  const { isLoggedIn } = useAuth();
   const { colorMode } = useColorMode();
 
   return (
@@ -23,15 +22,13 @@ export const NavBar = () => {
         w="100%"
       >
         <Container maxW={'container.2xl'}>
-          <Flex alignItems="center">
+          <Flex align="center">
             <Logo boxSize="40px" objectFit="cover" pointerEvents="none" />
             <Flex as="nav" ml={10}>
-              <Flex gap={10} flexWrap="wrap" justify="flex-start">
-                {!isLoggedIn && <NavItem title="Home" to="/" />}
-                {isLoggedIn && <NavItem title="My contacts" to="/contacts" />}
-              </Flex>
+              {!isLoggedIn && <NavItem title="Home" to="/" />}
+              {isLoggedIn && <NavItem title="Contacts" to="/contacts" />}
               {!isLoggedIn && (
-                <Flex gap={10} flexWrap="wrap" pos="absolute" right={32}>
+                <Flex gap={10} pos="absolute" right={32}>
                   <NavItem title="Log In" to="/login" />
                   <NavItem title="Register" to="/register" />
                 </Flex>

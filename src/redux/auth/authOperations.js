@@ -30,7 +30,6 @@ export const register = createAsyncThunk(
       registerSuccess();
       return data;
     } catch (error) {
-      console.log(error);
       registerError();
       return thunkAPI.rejectWithValue(error.message);
     }

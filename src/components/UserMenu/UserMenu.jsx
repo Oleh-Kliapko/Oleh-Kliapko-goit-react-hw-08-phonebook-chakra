@@ -1,12 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Image, Flex, Text, Button, useColorMode } from '@chakra-ui/react';
-import { getUser } from 'redux/auth/authSelectors';
 import authOperations from 'redux/auth/authOperations';
 import avatar from 'images/user.png';
+import { useAuth } from 'components/hooks';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
-  const user = useSelector(getUser);
+  const { user } = useAuth();
 
   const { colorMode } = useColorMode();
 

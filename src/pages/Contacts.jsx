@@ -1,27 +1,39 @@
-import { Flex } from '@chakra-ui/react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { Text, Flex, Container } from '@chakra-ui/react';
 import ContactItem from 'components/ContactItem';
-
-const contacts = {
-  items: [
-    { id: 'id-1', name: 'Oleh Kliapko', number: '333-33-33' },
-    { id: 'id-2', name: 'Rosie Simpson', number: '459-12-56' },
-    { id: 'id-3', name: 'Hermione Kline', number: '443-89-12' },
-    { id: 'id-4', name: 'Eden Clements', number: '645-17-79' },
-    { id: 'id-5', name: 'Annie Copeland', number: '227-91-26' },
-  ],
-};
+import AddContactForm from 'components/AddContactForm';
+import Filter from 'components/Filter';
+import {
+  selectFilteredContacts,
+  selectIsLoading,
+} from 'redux/contacts/contactSelectors';
+import { fetchContacts } from 'redux/contacts/contactOperations';
+import { Loader } from 'utils/loader';
 
 const Contacts = () => {
-  const { items } = contacts;
+  const filteredContacts = useSelector(selectFilteredContacts);
+  const isLoading = useSelector(selectIsLoading);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
-    <>
-      <Flex p={7} gap={5} flexWrap="wrap">
-        {items.map(item => (
+    <Container maxW={'container.lg'}>
+      <AddContactForm />
+      <Filter />
+      <Text fontSize="2xl" fontWeight="bold" mb={4}>
+        My lovely contacts
+      </Text>
+      {isLoading && <Loader />}
+      <Flex gap={12} flexWrap="wrap">
+        {filteredContacts.map(item => (
           <ContactItem key={item.id} contacts={item} />
         ))}
       </Flex>
-    </>
+    </Container>
   );
 };
 

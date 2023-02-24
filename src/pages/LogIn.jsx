@@ -39,7 +39,7 @@ const LogIn = () => {
       as="form"
       display="flex"
       flexDirection="column"
-      w="70vw"
+      w="lg"
       gap={5}
       p={7}
       onSubmit={handleSubmit(onFormSubmit)}
