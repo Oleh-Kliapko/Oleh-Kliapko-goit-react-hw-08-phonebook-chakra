@@ -4,6 +4,7 @@ import authOperations from 'redux/auth/authOperations';
 import avatar from 'images/user.png';
 import { useAuth } from 'components/hooks';
 import { setContactsValue } from 'redux/contacts/contactSlice';
+import { setFilterValue } from 'redux/contacts/filterSlice';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ export const UserMenu = () => {
   const handleLogOut = () => {
     dispatch(authOperations.logOut());
     dispatch(setContactsValue([]));
+    dispatch(setFilterValue(''));
   };
 
   const { colorMode } = useColorMode();
