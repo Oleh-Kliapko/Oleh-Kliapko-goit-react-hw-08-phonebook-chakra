@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { Box, useColorMode } from '@chakra-ui/react';
 
@@ -18,4 +19,9 @@ export const NavItem = ({ title, to }) => {
       {title}
     </Box>
   );
+};
+
+NavItem.proTypes = {
+  title: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
 };

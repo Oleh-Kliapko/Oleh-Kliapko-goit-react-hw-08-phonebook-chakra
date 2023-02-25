@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useAuth } from 'components/hooks';
 import { Navigate } from 'react-router-dom';
 
@@ -8,3 +9,8 @@ const PrivateRoute = ({ component: Component, redirectTo = '/' }) => {
 };
 
 export default PrivateRoute;
+
+PrivateRoute.propTypes = {
+  component: PropTypes.node.isRequired,
+  redirectTo: PropTypes.string.isRequired,
+};

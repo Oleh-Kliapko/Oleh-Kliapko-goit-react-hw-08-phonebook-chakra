@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
   Avatar,
   Text,
@@ -64,4 +65,8 @@ export const ContactItem = ({ contacts }) => {
       </Flex>
     </Flex>
   );
+};
+
+ContactItem.proTypes = {
+  contacts: PropTypes.object.isRequired,
 };
