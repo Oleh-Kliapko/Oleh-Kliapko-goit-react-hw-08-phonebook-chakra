@@ -3,10 +3,16 @@ import { Image, Flex, Text, Button, useColorMode } from '@chakra-ui/react';
 import authOperations from 'redux/auth/authOperations';
 import avatar from 'images/user.png';
 import { useAuth } from 'components/hooks';
+import { setContactsValue } from 'redux/contacts/contactSlice';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();
+
+  const handleLogOut = () => {
+    dispatch(authOperations.logOut());
+    dispatch(setContactsValue([]));
+  };
 
   const { colorMode } = useColorMode();
 
@@ -22,7 +28,7 @@ export const UserMenu = () => {
           w={24}
           shadow={colorMode === 'dark' ? 'dark-lg' : 'md'}
           bg={colorMode === 'dark' ? 'teal.500' : 'teal.200'}
-          onClick={() => dispatch(authOperations.logOut())}
+          onClick={handleLogOut}
         >
           Log Out
         </Button>

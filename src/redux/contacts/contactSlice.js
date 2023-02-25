@@ -44,4 +44,11 @@ export const contactSlice = createSlice({
     },
     [deleteContact.rejected]: onRejected,
   },
+  reducers: {
+    setContactsValue(state, action) {
+      state.items = action.payload;
+    },
+  },
 });
+
+export const { setContactsValue } = contactSlice.actions;
