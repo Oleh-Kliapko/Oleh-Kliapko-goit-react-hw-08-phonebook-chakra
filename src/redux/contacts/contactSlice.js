@@ -18,31 +18,32 @@ const onRejected = (state, action) => {
 export const contactSlice = createSlice({
   name: 'contact',
   initialState: contacts,
-  extraReducers: {
-    [fetchContacts.pending]: onPending,
-    [fetchContacts.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.items = action.payload;
-    },
-    [fetchContacts.rejected]: onRejected,
-
-    [addContact.pending]: onPending,
-    [addContact.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.items.unshift(action.payload);
-    },
-    [addContact.rejected]: onRejected,
-
-    [deleteContact.pending]: onPending,
-    [deleteContact.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      const index = state.items.findIndex(({ id }) => id === action.payload.id);
-      state.items.splice(index, 1);
-    },
-    [deleteContact.rejected]: onRejected,
+  extraReducers: builder => {
+    builder
+      .addCase(fetchContacts.pending, onPending)
+      .addCase(fetchContacts.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = action.payload;
+      })
+      .addCase(fetchContacts.rejected, onRejected)
+      .addCase(addContact.pending, onPending)
+      .addCase(addContact.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items.unshift(action.payload);
+      })
+      .addCase(addContact.rejected, onRejected)
+      .addCase(deleteContact.pending, onPending)
+      .addCase(deleteContact.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        const index = state.items.findIndex(
+          ({ id }) => id === action.payload.id
+        );
+        state.items.splice(index, 1);
+      })
+      .addCase(deleteContact.rejected, onRejected);
   },
   reducers: {
     setContactsValue(state, action) {
