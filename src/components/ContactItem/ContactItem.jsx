@@ -10,6 +10,7 @@ import {
 import { PhoneIcon, DeleteIcon } from '@chakra-ui/icons';
 import { deleteContact } from 'redux/contacts/contactOperations';
 import { selectIsLoading } from 'redux/contacts/contactSelectors';
+import { setFilterValue } from 'redux/contacts/filterSlice';
 import { LoaderDelete } from 'utils/loader';
 
 export const ContactItem = ({ contacts }) => {
@@ -18,6 +19,11 @@ export const ContactItem = ({ contacts }) => {
   const isLoading = useSelector(selectIsLoading);
 
   const dispatch = useDispatch();
+
+  const handleDelete = () => {
+    dispatch(deleteContact(id));
+    dispatch(setFilterValue(''));
+  };
 
   return (
     <Flex
@@ -48,7 +54,7 @@ export const ContactItem = ({ contacts }) => {
           type="button"
           colorScheme="teal"
           size="sm"
-          onClick={() => dispatch(deleteContact(id))}
+          onClick={handleDelete}
           disabled={isLoading}
         >
           {isLoading && <LoaderDelete />}

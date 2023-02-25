@@ -25,7 +25,7 @@ export const registerError = () =>
 
 export const loginSuccess = () =>
   toast.success(
-    'You have logged in. Enjoy creating your own phone book',
+    'You have logged in. Add or delete new contacts in your phone book',
     optionsToast
   );
 export const loginError = () =>
