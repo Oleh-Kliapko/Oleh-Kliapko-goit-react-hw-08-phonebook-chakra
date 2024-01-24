@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-08-phonebook-chakra/static/css/main.b3eeeea7.css",
-    "main.js": "/goit-react-hw-08-phonebook-chakra/static/js/main.8fbeed1a.js",
-    "static/js/620.9793eca4.chunk.js": "/goit-react-hw-08-phonebook-chakra/static/js/620.9793eca4.chunk.js",
-    "static/js/896.337b613e.chunk.js": "/goit-react-hw-08-phonebook-chakra/static/js/896.337b613e.chunk.js",
-    "static/js/418.b4bcc8e9.chunk.js": "/goit-react-hw-08-phonebook-chakra/static/js/418.b4bcc8e9.chunk.js",
-    "static/js/610.fde25918.chunk.js": "/goit-react-hw-08-phonebook-chakra/static/js/610.fde25918.chunk.js",
-    "static/js/268.2afdd42e.chunk.js": "/goit-react-hw-08-phonebook-chakra/static/js/268.2afdd42e.chunk.js",
-    "static/media/travolta.gif": "/goit-react-hw-08-phonebook-chakra/static/media/travolta.3d46cd6936b49208a58f.gif",
-    "static/media/bookImg.jpg": "/goit-react-hw-08-phonebook-chakra/static/media/bookImg.7de6fea5277a5f42846c.jpg",
-    "index.html": "/goit-react-hw-08-phonebook-chakra/index.html",
-    "static/media/logo.svg": "/goit-react-hw-08-phonebook-chakra/static/media/logo.034ef726eb08f413c8e9ff1b0abe7414.svg",
-    "main.b3eeeea7.css.map": "/goit-react-hw-08-phonebook-chakra/static/css/main.b3eeeea7.css.map",
-    "main.8fbeed1a.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/main.8fbeed1a.js.map",
-    "620.9793eca4.chunk.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/620.9793eca4.chunk.js.map",
-    "896.337b613e.chunk.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/896.337b613e.chunk.js.map",
-    "418.b4bcc8e9.chunk.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/418.b4bcc8e9.chunk.js.map",
-    "610.fde25918.chunk.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/610.fde25918.chunk.js.map",
-    "268.2afdd42e.chunk.js.map": "/goit-react-hw-08-phonebook-chakra/static/js/268.2afdd42e.chunk.js.map"
+    "main.css": "/Phonebook-version-3/static/css/main.b3eeeea7.css",
+    "main.js": "/Phonebook-version-3/static/js/main.6343e978.js",
+    "static/js/620.f52d7e9e.chunk.js": "/Phonebook-version-3/static/js/620.f52d7e9e.chunk.js",
+    "static/js/896.a87bc847.chunk.js": "/Phonebook-version-3/static/js/896.a87bc847.chunk.js",
+    "static/js/418.5efa1819.chunk.js": "/Phonebook-version-3/static/js/418.5efa1819.chunk.js",
+    "static/js/610.d356bd73.chunk.js": "/Phonebook-version-3/static/js/610.d356bd73.chunk.js",
+    "static/js/268.69830475.chunk.js": "/Phonebook-version-3/static/js/268.69830475.chunk.js",
+    "static/media/travolta.gif": "/Phonebook-version-3/static/media/travolta.3d46cd6936b49208a58f.gif",
+    "static/media/bookImg.jpg": "/Phonebook-version-3/static/media/bookImg.7de6fea5277a5f42846c.jpg",
+    "index.html": "/Phonebook-version-3/index.html",
+    "static/media/logo.svg": "/Phonebook-version-3/static/media/logo.034ef726eb08f413c8e9ff1b0abe7414.svg",
+    "main.b3eeeea7.css.map": "/Phonebook-version-3/static/css/main.b3eeeea7.css.map",
+    "main.6343e978.js.map": "/Phonebook-version-3/static/js/main.6343e978.js.map",
+    "620.f52d7e9e.chunk.js.map": "/Phonebook-version-3/static/js/620.f52d7e9e.chunk.js.map",
+    "896.a87bc847.chunk.js.map": "/Phonebook-version-3/static/js/896.a87bc847.chunk.js.map",
+    "418.5efa1819.chunk.js.map": "/Phonebook-version-3/static/js/418.5efa1819.chunk.js.map",
+    "610.d356bd73.chunk.js.map": "/Phonebook-version-3/static/js/610.d356bd73.chunk.js.map",
+    "268.69830475.chunk.js.map": "/Phonebook-version-3/static/js/268.69830475.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3eeeea7.css",
-    "static/js/main.8fbeed1a.js"
+    "static/js/main.6343e978.js"
   ]
 }
