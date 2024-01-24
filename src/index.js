@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <PersistGate loading={null} persistor={persistor}>
         <ChakraProvider theme={theme}>
           <ColorModeScript />
-          <BrowserRouter basename="goit-react-hw-08-phonebook-chakra">
+          <BrowserRouter basename="Phonebook-version-3">
             <App />
           </BrowserRouter>
         </ChakraProvider>
